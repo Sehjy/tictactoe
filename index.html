@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TicTacToe</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous"
+		/>
+		<link href="./style.css" rel="stylesheet" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://www.flaticon.com/svg/static/icons/svg/1164/1164682.svg"
+		/>
+	</head>
+	<body>
+		<div class="start-popup"></div>
+		<h1 class="title">Tic-Tac-Toe</h1>
+		<div class="game-card">
+			<div class="Xs">
+				<text class="p1"></text>
+				<text class="X-s">X's</text>
+			</div>
+			<div class="game-board">
+				<div class="board">
+					<button class="grid" id="zero">
+						<text></text>
+					</button>
+					<button class="grid" id="one">
+						<text></text>
+					</button>
+					<button class="grid" id="two">
+						<text></text>
+					</button>
+					<button class="grid" id="three">
+						<text></text>
+					</button>
+					<button class="grid" id="four">
+						<text></text>
+					</button>
+					<button class="grid" id="five">
+						<text></text>
+					</button>
+					<button class="grid" id="six">
+						<text></text>
+					</button>
+					<button class="grid" id="seven">
+						<text></text>
+					</button>
+					<button class="grid" id="eight">
+						<text></text>
+					</button>
+				</div>
+			</div>
+			<div class="Os">
+				<text class="p2"></text>
+				<text class="O-s">O's</text>
+			</div>
+		</div>
+
+		<div class="diff-reset-clear">
+			<div class="select">
+				<select name="AI Difficulty" class="diff-select">
+					<option value="">AI Difficulty:</option>
+					<option value="Normal">Normal</option>
+					<option value="Impossible">Impossible</option>
+				</select>
+			</div>
+
+			<button class="restart-btn">Restart</button>
+			<button class="clear-btn">Clear</button>
+		</div>
+	</body>
+</html>

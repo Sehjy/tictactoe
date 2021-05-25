@@ -1,0 +1,123 @@
+* {
+	font-family: "VT323", monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #daac70;
+}
+
+.title {
+	font-size: 10rem;
+	margin-bottom: 1rem;
+	color: red;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: black;
+}
+
+.game-card {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.X-s,
+.O-s {
+	font-size: 7rem;
+}
+
+.game-board {
+	min-width: 40vh;
+	min-height: 30vh;
+	border: 3px solid black;
+	margin: 1rem;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	margin: 3rem;
+	min-height: 30vh;
+}
+
+.grid {
+	background: transparent;
+	border: none;
+}
+
+#zero,
+#one,
+#three,
+#four {
+	border-bottom: solid black;
+	border-right: solid black;
+}
+
+#two,
+#five {
+	border-bottom: solid black;
+}
+
+#six,
+#seven {
+	border-right: solid black;
+}
+
+.select {
+	position: relative;
+	overflow: hidden;
+	border: solid black;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	color: black;
+	cursor: pointer;
+	width: 23vh;
+	padding: 1.4rem;
+}
+
+.select::after {
+	content: "\25BC";
+	background: red;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+	pointer-events: none;
+	border-left: solid black;
+}
+
+.diff-select {
+	font-size: 2rem;
+}
+
+.diff-reset-clear {
+	width: 50vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 1rem;
+}
+
+.restart-btn,
+.clear-btn {
+	font-size: 2rem;
+	border: 3px solid black;
+	cursor: pointer;
+	padding: 1rem;
+}
