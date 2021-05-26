@@ -14,6 +14,22 @@ body {
 	background-color: #daac70;
 }
 
+.result-card {
+	width: 100vw;
+	height: 80vh;
+	position: fixed;
+	backdrop-filter: blur(10px);
+	top: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-color: red;
+	font-size: 15rem;
+}
+
 .title {
 	font-size: 10rem;
 	margin-bottom: 1rem;
@@ -30,9 +46,228 @@ body {
 	align-items: center;
 }
 
+.Xs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Os {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .X-s,
 .O-s {
-	font-size: 7rem;
+	font-size: 9rem;
+}
+
+.input-toggle {
+	display: flex;
+	justify-content: space-between;
+}
+
+.status-nr {
+	padding-right: 10px;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+}
+
+.status-r {
+	padding-left: 10px;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	opacity: 50%;
+}
+
+.switch-ctn {
+	display: flex;
+	justify-content: space-evenly;
+	padding-right: 20px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: flex;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	border: 1px solid black;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	top: 3px;
+	left: 3px;
+	bottom: 4px;
+	background-color: black;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(25px);
+	-ms-transform: translateX(25px);
+	transform: translateX(25px);
+	background: red;
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.input-toggle {
+	display: flex;
+	flex-direction: row;
+}
+
+.input-toggle2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.status-nr2 {
+	padding-right: 10px;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+}
+
+.status-r2 {
+	padding-left: 10px;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	opacity: 50%;
+}
+
+.switch-ctn2 {
+	display: flex;
+	justify-content: space-evenly;
+	padding-right: 20px;
+}
+
+/* The switch - the box around the slider */
+.switch2 {
+	position: relative;
+	display: flex;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch2 input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider2 {
+	border: 1px solid black;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider2:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	top: 3px;
+	left: 3px;
+	bottom: 4px;
+	background-color: black;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:focus + .slider2 {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider2:before {
+	-webkit-transform: translateX(25px);
+	-ms-transform: translateX(25px);
+	transform: translateX(25px);
+	background: red;
+}
+
+/* Rounded sliders */
+.slider2.round2 {
+	border-radius: 34px;
+}
+
+.slider2.round2:before {
+	border-radius: 50%;
+}
+
+.input-toggle2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.start-btn {
+	font-size: 4rem;
+	border: 3px solid black;
+	cursor: pointer;
+	padding: 1rem;
 }
 
 .game-board {
@@ -40,6 +275,7 @@ body {
 	min-height: 30vh;
 	border: 3px solid black;
 	margin: 1rem;
+	display: none;
 }
 
 .board {
@@ -73,6 +309,10 @@ body {
 	border-right: solid black;
 }
 
+.move {
+	font-size: 5rem;
+}
+
 .select {
 	position: relative;
 	overflow: hidden;
@@ -87,7 +327,7 @@ select {
 	border: none;
 	color: black;
 	cursor: pointer;
-	width: 23vh;
+	width: 24vh;
 	padding: 1.4rem;
 }
 
@@ -107,7 +347,7 @@ select {
 }
 
 .diff-reset-clear {
-	width: 50vh;
+	min-width: 40vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -120,4 +360,5 @@ select {
 	border: 3px solid black;
 	cursor: pointer;
 	padding: 1rem;
+	display: none;
 }

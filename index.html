@@ -24,48 +24,76 @@
 			href="https://www.flaticon.com/svg/static/icons/svg/1164/1164682.svg"
 		/>
 	</head>
+
 	<body>
-		<div class="start-popup"></div>
+		<div class="result-card">
+			<p class="result-text"></p>
+		</div>
 		<h1 class="title">Tic-Tac-Toe</h1>
+
 		<div class="game-card">
 			<div class="Xs">
-				<text class="p1"></text>
 				<text class="X-s">X's</text>
-			</div>
-			<div class="game-board">
-				<div class="board">
-					<button class="grid" id="zero">
-						<text></text>
-					</button>
-					<button class="grid" id="one">
-						<text></text>
-					</button>
-					<button class="grid" id="two">
-						<text></text>
-					</button>
-					<button class="grid" id="three">
-						<text></text>
-					</button>
-					<button class="grid" id="four">
-						<text></text>
-					</button>
-					<button class="grid" id="five">
-						<text></text>
-					</button>
-					<button class="grid" id="six">
-						<text></text>
-					</button>
-					<button class="grid" id="seven">
-						<text></text>
-					</button>
-					<button class="grid" id="eight">
-						<text></text>
-					</button>
+				<div class="input-toggle">
+					<div class="switch-ctn">
+						<text class="status-nr"> PLAYER </text>
+						<label class="switch" id="form-switch">
+							<input class="input-tog" id="tog-val" type="checkbox" />
+							<span class="slider round"></span>
+						</label>
+						<text class="status-r"> AI </text>
+					</div>
 				</div>
 			</div>
+			<div class="mid-ctn">
+				<div class="start-btn-ctn">
+					<button class="start-btn">Start!</button>
+				</div>
+				<div class="game-board">
+					<div class="board">
+						<button class="grid" id="zero" value="0">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="one" value="1">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="two" value="2">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="three" value="3">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="four" value="4">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="five" value="5">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="six" value="6">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="seven" value="7">
+							<p class="move"></p>
+						</button>
+						<button class="grid" id="eight" value="8">
+							<p class="move"></p>
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="Os">
-				<text class="p2"></text>
 				<text class="O-s">O's</text>
+				<div class="input-toggle2">
+					<div class="switch-ctn2">
+						<text class="status-nr2"> PLAYER </text>
+						<label class="switch2" id="form-switch2">
+							<input class="input-tog2" id="tog-val2" type="checkbox" />
+							<span class="slider2 round2"></span>
+						</label>
+						<text class="status-r2"> AI </text>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -79,7 +107,7 @@
 			</div>
 
 			<button class="restart-btn">Restart</button>
-			<button class="clear-btn">Clear</button>
 		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>
